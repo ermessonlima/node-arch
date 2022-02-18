@@ -1,11 +1,19 @@
 import { Entity } from "../../core/domain/Entity";
 
+/**
+ * 
+ * @property {string} challengeId - The id of the challenge that the submission is
+ * for.
+ * @property {string} studentId - The student who submitted the challenge.
+ * @property {Date} createdAt - The date the submission was created.
+ */
 type SubmissionProps = {
     challengeId: string;
     studentId: string;
     createdAt?: Date;
 }
 
+/*  */
 export class Submission extends Entity<SubmissionProps> {
     private constructor(props: SubmissionProps, id?: string) {
         super(props, id);
